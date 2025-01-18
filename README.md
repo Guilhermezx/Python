@@ -2,6 +2,7 @@
 
 ## Diferença de Lista do Python e Array do NumPy
 
+\\\
 import pandas as pd
 import numpy as np
 
@@ -14,9 +15,10 @@ num_elementos = 100
 
 array_elementos = np.arange(num_elementos)
 print(array_elementos[-1])
-
+\\\
 
 # # Criação de Array no NumPy
+\\\
 import numpy as np
 
 array_teste = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
@@ -27,9 +29,14 @@ print(f"Criação de Array no NumPy utilizando o metodo .zeros:\n{np.zeros([20])
 print(f"Criação de Array no NumPy utilizando o metodo .Empty:\n{np.empty([15])}\n") # Cria um novo Array sem inicializar seus valores, o conteudo da array sera um bloco de memoria não inicializado.
 print(f"Criação de Array no NumPy utilizando o metodo .arange:\n{np.arange(20)}\n") # Cria um Array contendo uma sequencia de valores, que retorna uma array em vez de uma lista.
 print(f"Criação de Array no NumPy utilizando o metodo .Linspace:\n{np.linspace(0, 40, num = 41)}\n") #Cria uma Array determinando o inicio de o fim, e também espaçamentos.
+
+\\\
+
 # # NumPy: A importancia de Definir o tipo de dados
+\\\
 import numpy as np
 
 num_elementos = 1000000000
 
 array_perfomance = np.zeros(num_elementos)
+\\\
