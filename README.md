@@ -76,10 +76,29 @@ rng = np.random.default_rng() # Cria uma instância no gerador de numeros aleato
 #Selecionar de forma aleatorio um dos nomes do Array.
 
 indice_aleatorio = rng.integers(low=0, high=len(array_nomes), size=3) # O Array indice_aleatorio esta recebendo a função integers, que gera uma array contendo numeros inteiros aleatorios em um intervalo especifico.
-nomes_aleatorios = array_nomes[indice_aleatorio] # nomes_aleatorios esta recebendo os dados aleatorios do array_nomes de forma aleatorios pelo indice_aleatorio.
+nomes_aleatorios = array_nomes[indice_aleatorio] # nomes_aleatorios esta recebendo os dados do array_nomes de forma aleatorios pelo indice_aleatorio.
 print(nomes_aleatorios)
 
 # Low = e o indice dos intervalos, neste caso, inicia no 0.
 # hight=Len = esta definindo o tamanho do array, neste caso o tamanho e a quantidade de item que esta dentro do array "Array_nomes".
 #size = é a quantidade de nomes que sera sorteado dos nomes armazenados na array " Array_nomes".
+```
+
+# # Diferenças entre vetor, Matrizes e Tensor
+```python
+import numpy as np
+
+rng = np.random.default_rng(2) # Cria uma instância para gerar numeros aleatorios.
+
+vetor = rng.random(1) # Cria um objeto de um vetor, que vai armazenar 1 numero aleatorio em 1 dimensão.
+
+print(f"Array de 1 dimensão randômico:\n{vetor}\n")
+
+matriz = rng.random([2,2]) # Cria um objeto de matriz, que vai armazenar numeros aleatorios em 2 dimensões.
+
+print(f"Array de 2 dimensão randômico:\n{matriz}\n")
+
+tensor = rng.random([3, 3, 3]) # Cria um objeto de Tensor, que vai armazenar numeros aleatorios em 3 dimensões ou mais.
+
+print(f"Array de 3 dimensão randômico:\n{tensor}\n")
 ```
