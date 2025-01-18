@@ -1,4 +1,5 @@
 # Python
+Aqui é um Guia rápido com as funções e metodos do NumPy e Pandas.
 
 ## Diferença de Lista do Python e Array do NumPy
 
@@ -62,4 +63,23 @@ print(array_aleatorio)
 # 2 = O Menor numero que o array pode chegar.
 # 15 = O Maior numero que o Array pode chegar.
 # 3 = A Quantidade de numeros aleatorio que vão ser gerado.
+
+```
+# # Listar Nomes de forma aleatoria de um Array
+```python
+import numpy as np
+
+array_nomes = np.array(["Guilherme", "Célia", "Cecilia", "Leticia", "Noah", "Tesla"]) # Array criado e ja recebendo os nomes, que vão ser sorteados.
+
+rng = np.random.default_rng() # Cria uma instância no gerador de numeros aleatorios.
+
+#Selecionar de forma aleatorio um dos nomes do Array.
+
+indice_aleatorio = rng.integers(low=0, high=len(array_nomes), size=3) # O Array indice_aleatorio esta recebendo a função integers, que gera uma array contendo numeros inteiros aleatorios em um intervalo especifico.
+nomes_aleatorios = array_nomes[indice_aleatorio] # nomes_aleatorios esta recebendo os dados aleatorios do array_nomes de forma aleatorios pelo indice_aleatorio.
+print(nomes_aleatorios)
+
+# Low = e o indice dos intervalos, neste caso, inicia no 0.
+# hight=Len = esta definindo o tamanho do array, neste caso o tamanho e a quantidade de item que esta dentro do array "Array_nomes".
+#size = é a quantidade de nomes que sera sorteado dos nomes armazenados na array " Array_nomes".
 ```
