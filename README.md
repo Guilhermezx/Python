@@ -45,3 +45,21 @@ array_perfomance = np.zeros(num_elementos, dtype = np.int8)
 #int8 significa que os elementos deste array criado será um inteiro de 8bits, variando entre (-128 a 127)
 # Isto define e ajuda a velocidade que o codigo vai ser executado.
 ```
+
+# # Criação de numeros Randomicos
+```python
+import numpy as np
+
+rng = np.random.default_rng() # Cria uma instância no gerador de numeros aleatorios
+print(rng.random(10)) # Gera e imprime os numeros aleatorios, no caso sera gerado 10 numeros de ponto flutuante, sempre que o codigo for executado.
+
+
+#Para iniciar a aleatoriedade a partir de um numero especifido:
+
+array_aleatorio = rng.uniform(2, 15, 3) # Vai ser gerado um Array aleatorio a partir de um numero espeficido.
+print(array_aleatorio)
+
+# 2 = O Menor numero que o array pode chegar.
+# 15 = O Maior numero que o Array pode chegar.
+# 3 = A Quantidade de numeros aleatorio que vão ser gerado.
+```
