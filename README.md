@@ -183,3 +183,23 @@ fig.show() # Mostra o gráfico interativo que foi criado.
 ```
 Imagem do Gráfico Criado:
 ![Gráfico utilizando Plotly](img/01.png)
+# # Gráfico utilizando o Transpose
+```python
+import numpy as np
+import plotly.express as px
+
+array_a = np.loadtxt("Vetor_a.txt", dtype = np.float64, delimiter = ";")
+array_b = np.loadtxt("Vetor_b.txt", dtype = np.float64, delimiter = ";")
+array_c = np.loadtxt("Vetor_C.txt", dtype = np.float64, delimiter = ";")
+print(array_a)
+
+array_abc = np.vstack([array_a,array_b,array_c]) #O vsstack Empilha os arrays de forma vertical, um em cima do outro, criando um novo array 2D, aonde cada array se torna uma linha.
+print(array_a) # Imprime o Array para verificação
+array_abc = array_abc.transpose() # transpõe o array para 2D, ou seja ele muda as linhas por colunas, isso faz com que cada linha se torne uma coluna e vice-versa.
+print(array_abc)
+
+fig = px.line(array_abc) # Cria um gráfico de linha, utilizando o transpose, cada coluna do grafico anterior, se torna uma linha.
+fig.show() # Exibe o gráfico interativo.
+```
+Imagem do Gráfico com a transposição
+![Gráfico utilizando o Transpose](img/02.png)
