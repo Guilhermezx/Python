@@ -106,6 +106,8 @@ print(f"Array de 3 dimensão randômico:\n{tensor}\n")
 # # Manipulação de Array
 
 ```python
+import numpy as np
+
 # Array 1 dimensao sem e com.
 
 rng = np.random.default_rng() # Cria um gerador de números aleatorios.
@@ -193,7 +195,7 @@ array_b = np.loadtxt("Vetor_b.txt", dtype = np.float64, delimiter = ";")
 array_c = np.loadtxt("Vetor_C.txt", dtype = np.float64, delimiter = ";")
 print(array_a)
 
-array_abc = np.vstack([array_a,array_b,array_c]) #O vsstack Empilha os arrays de forma vertical, um em cima do outro, criando um novo array 2D, aonde cada array se torna uma linha.
+array_abc = np.vstack([array_a,array_b,array_c]) #O vstack Empilha os arrays de forma vertical, um em cima do outro, criando um novo array 2D, aonde cada array se torna uma linha.
 print(array_a) # Imprime o Array para verificação
 array_abc = array_abc.transpose() # transpõe o array para 2D, ou seja ele muda as linhas por colunas, isso faz com que cada linha se torne uma coluna e vice-versa.
 print(array_abc)
