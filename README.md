@@ -180,7 +180,6 @@ print(array_a)
 
 fig = px.scatter([array_a,array_b,array_c]) # Função do Plotly para criar um gráfico de dispersão.
 fig.show() # Mostra o gráfico interativo que foi criado.
-
+```
 Imagem do Gráfico Criado:
 ![Gráfico utilizando Plotly](img/01.png)
-```
